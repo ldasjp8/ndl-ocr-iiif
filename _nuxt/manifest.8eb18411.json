@@ -1,0 +1,12 @@
+{
+  "name": "NDL OCR x IIIF",
+  "short_name": "NDL OCR x IIIF",
+  "description": "次世代デジタルライブラリーで公開されているOCR結果をIIIF形式に変換します。",
+  "icons": [],
+  "start_url": "/ndl-ocr-iiif/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "ja",
+  "orientation": "portrait"
+}
