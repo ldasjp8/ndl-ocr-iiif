@@ -1,7 +1,7 @@
 const lang = 'ja'
 const siteName = 'NDL OCR x IIIF'
 const siteDesc =
-  '次世代デジタルライブラリーで公開されているOCR結果をIIIF形式に変換します。'
+  '国立国会図書館「次世代デジタルライブラリー」で公開されているOCR結果をIIIFビューアで表示します。'
 const shortName = 'NDL OCR x IIIF'
 const siteKeywords = ['IIIF', 'OCR', 'デジタルアーカイブ'].join(', ')
 const gtag = 'G-9R7V2059PB'
