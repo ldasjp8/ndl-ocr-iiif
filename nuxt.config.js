@@ -4,8 +4,8 @@ const siteDesc =
   '次世代デジタルライブラリーで公開されているOCR結果をIIIF形式に変換します。'
 const shortName = 'NDL OCR x IIIF'
 const siteKeywords = ['IIIF', 'OCR', 'デジタルアーカイブ'].join(', ')
-const gtag = 'G-2PV4RTWY6M'
-const hostname = 'https://ldasjp8.github.io'
+const gtag = 'G-9R7V2059PB'
+const hostname = 'http://static.ldas.jp'
 const slug = '/ndl-ocr-iiif'
 
 const env = {
