@@ -1,7 +1,7 @@
 {
   "name": "NDL OCR x IIIF",
   "short_name": "NDL OCR x IIIF",
-  "description": "次世代デジタルライブラリーで公開されているOCR結果をIIIF形式に変換します。",
+  "description": "国立国会図書館「次世代デジタルライブラリー」で公開されているOCR結果をIIIFビューアで表示します。",
   "icons": [],
   "start_url": "/ndl-ocr-iiif/?standalone=true",
   "display": "standalone",
