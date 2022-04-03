@@ -14,12 +14,12 @@ const Mirador = require('mirador/dist/es/src/index')
 })
 export default class FullTextSearch extends Vue {
   mounted() {
-    const id = this.$route.params.id
+    const manifest = this.$route.query.manifest
 
     const windows = []
 
     const obj: any = {}
-    obj.manifestId = `https://d1fasenpql7fi9.cloudfront.net/v1/manifest/${id}.json`
+    obj.manifestId = manifest
     obj.thumbnailNavigationPosition = 'far-right'
     windows.push(obj)
 
