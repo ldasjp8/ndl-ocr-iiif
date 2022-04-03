@@ -15,16 +15,9 @@
         <v-toolbar-items v-if="!isMobile">
           <v-menu offset-y>
             <template #activator="{ on }">
-              <template v-if="langLabel">
-                <v-btn depressed text v-on="on">
-                  {{ langLabel[$i18n.locale] }}
-                </v-btn>
-              </template>
-              <template v-else>
-                <v-btn depressed icon v-on="on">
-                  <v-icon>mdi-translate</v-icon>
-                </v-btn>
-              </template>
+              <v-btn depressed icon v-on="on">
+                <v-icon>mdi-translate</v-icon>
+              </v-btn>
             </template>
 
             <v-list>
