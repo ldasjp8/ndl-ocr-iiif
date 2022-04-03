@@ -166,4 +166,8 @@ export default {
   build: {},
 
   ...routerBase,
+
+  generate: {
+    fallback: true,
+  },
 }
