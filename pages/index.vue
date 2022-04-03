@@ -72,7 +72,7 @@ export default class FullTextSearch extends Vue {
     }
 
     this.$router.push(
-      this.localePath({
+      (this as any).localePath({
         name: 'id',
         params: {
           id,

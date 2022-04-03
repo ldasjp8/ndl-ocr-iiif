@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts">
-import Mirador from 'mirador/dist/es/src/index'
 import { Vue, Component } from 'nuxt-property-decorator'
+const Mirador = require('mirador/dist/es/src/index')
 @Component({
   components: {},
   layout: 'blank',
@@ -25,7 +25,7 @@ export default class FullTextSearch extends Vue {
 
     Mirador.viewer({
       id: 'mirador',
-      language: this.$i18n.locale,
+      language: (this as any).$i18n.locale,
       theme: {
         transitions:
           window.location.port === '4488' ? { create: () => 'none' } : {},
