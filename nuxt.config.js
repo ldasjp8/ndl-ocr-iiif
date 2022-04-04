@@ -13,6 +13,8 @@ const env = {
   slug,
   siteName,
   siteDesc,
+  step: 'https://step.aws.ldas.jp',
+  ocr: 'https://ocr.aws.ldas.jp',
 }
 
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する

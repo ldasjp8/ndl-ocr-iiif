@@ -122,21 +122,18 @@ export default class FullTextSearch extends Vue {
 
     this.status = 'RUNNING'
 
-    const res = await this.$axios.$post(
-      'https://0nqmlna15g.execute-api.us-east-1.amazonaws.com/prod/execution',
-      {
-        input: `{"id": "${id}"}`,
-        name,
-        stateMachineArn:
-          'arn:aws:states:us-east-1:921043147308:stateMachine:sfn-sam-app-statemachine',
-      }
-    )
+    const res = await this.$axios.$post(process.env.step + '/execution', {
+      input: `{"id": "${id}"}`,
+      name,
+      stateMachineArn:
+        'arn:aws:states:us-east-1:921043147308:stateMachine:sfn-sam-app-statemachine',
+    })
     // console.log({ res })
     const executionArn = res.executionArn
 
     while (true) {
       const res = await this.$axios.$post(
-        `https://0nqmlna15g.execute-api.us-east-1.amazonaws.com/prod/execution/status`,
+        process.env.step + `/execution/status`,
         {
           executionArn,
         }

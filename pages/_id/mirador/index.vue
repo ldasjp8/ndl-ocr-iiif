@@ -19,7 +19,7 @@ export default class FullTextSearch extends Vue {
     const windows = []
 
     const obj: any = {}
-    obj.manifestId = `https://d1fasenpql7fi9.cloudfront.net/v1/manifest/${id}.json`
+    obj.manifestId = `${process.env.ocr}/v1/manifest/${id}.json`
     obj.thumbnailNavigationPosition = 'far-right'
     windows.push(obj)
 
