@@ -5,6 +5,9 @@
     <v-container class="my-10">
       <div class="text-center">
         {{ siteDesc }}
+        <div class="mt-4">
+          <a href="https://lab.ndl.go.jp/dl/">https://lab.ndl.go.jp/dl/</a>
+        </div>
       </div>
       <div class="mt-10 text-center">
         <v-text-field
