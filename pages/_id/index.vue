@@ -6,7 +6,9 @@
       <div class="text-center">
         {{ siteDesc }}
         <div class="mt-4">
-          <a href="https://lab.ndl.go.jp/dl/">https://lab.ndl.go.jp/dl/</a>
+          <a target="_blank" href="https://lab.ndl.go.jp/dl/"
+            >https://lab.ndl.go.jp/dl/</a
+          >
         </div>
       </div>
       <div class="mt-10 text-center">
@@ -104,7 +106,7 @@ export default class FullTextSearch extends Vue {
     const id = this.$route.params.id
     if (id) {
       this.id = id
-      this.search()
+      this.init() // search()
     }
   }
 
@@ -114,7 +116,24 @@ export default class FullTextSearch extends Vue {
     this.search()
   }
 
-  async search() {
+  search() {
+    const id = this.id
+
+    if (!id) {
+      return
+    }
+
+    this.$router.push(
+      (this as any).localePath({
+        name: 'id',
+        params: {
+          id,
+        },
+      })
+    )
+  }
+
+  async init() {
     const id = this.id
 
     if (!id) {
@@ -135,6 +154,8 @@ export default class FullTextSearch extends Vue {
     const executionArn = res.executionArn
 
     while (true) {
+      await new Promise((resolve) => setTimeout(resolve, 3000))
+
       const res = await this.$axios.$post(
         process.env.step + `/execution/status`,
         {
@@ -151,7 +172,6 @@ export default class FullTextSearch extends Vue {
         console.log({ res })
         break
       }
-      await new Promise((resolve) => setTimeout(resolve, 3000))
     }
   }
 }

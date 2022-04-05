@@ -4,7 +4,9 @@
       <div class="text-center">
         {{ siteDesc }}
         <div class="mt-4">
-          <a href="https://lab.ndl.go.jp/dl/">https://lab.ndl.go.jp/dl/</a>
+          <a target="_blank" href="https://lab.ndl.go.jp/dl/"
+            >https://lab.ndl.go.jp/dl/</a
+          >
         </div>
       </div>
       <div class="mt-10 text-center">
