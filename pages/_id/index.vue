@@ -54,7 +54,7 @@
           </template>
           <template v-else-if="status === 'SUCCEEDED'">
             <v-row>
-              <v-col>
+              <v-col cols="12" :md="3">
                 <v-btn
                   :to="localePath({ name: 'id-mirador', params: { id: id } })"
                   target="_blank"
@@ -67,7 +67,33 @@
                   Mirador
                 </v-btn>
               </v-col>
-              <v-col>
+              <v-col cols="12" :md="3">
+                <v-btn
+                  :href="`https://universalviewer.io/examples/uv/uv.html#?manifest=${output.manifest}`"
+                  target="_blank"
+                  class="info"
+                  block
+                  rounded
+                  depressed
+                  large
+                >
+                  Universal Viewer <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                </v-btn>
+              </v-col>
+              <v-col cols="12" :md="3">
+                <v-btn
+                  :href="`https://www.kanzaki.com/works/2016/pub/image-annotator?u=${output.manifest}`"
+                  target="_blank"
+                  class="info"
+                  block
+                  rounded
+                  depressed
+                  large
+                >
+                  Image Annotator <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                </v-btn>
+              </v-col>
+              <v-col cols="12" :md="3">
                 <v-btn
                   :href="`http://codh.rois.ac.jp/software/iiif-curation-viewer/demo/?curation=${output.curation}`"
                   target="_blank"
@@ -77,7 +103,7 @@
                   depressed
                   large
                 >
-                  Curation Viewer
+                  Curation Viewer <v-icon class="ml-1">mdi-exit-to-app</v-icon>
                 </v-btn>
               </v-col>
             </v-row>
