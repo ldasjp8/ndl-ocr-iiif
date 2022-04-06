@@ -53,86 +53,110 @@
             {{ $t('failed') }}
           </template>
           <template v-else-if="status === 'SUCCEEDED'">
-            <v-row>
-              <v-col cols="12" :md="3">
-                <v-btn
-                  :to="localePath({ name: 'id-mirador', params: { id: id } })"
-                  target="_blank"
-                  class="info"
-                  block
-                  rounded
-                  depressed
-                  large
-                >
-                  Mirador
-                </v-btn>
-              </v-col>
-              <v-col cols="12" :md="3">
-                <v-btn
-                  :href="`https://universalviewer.io/examples/uv/uv.html#?manifest=${output.manifest}`"
-                  target="_blank"
-                  class="info"
-                  block
-                  rounded
-                  depressed
-                  large
-                >
-                  Universal Viewer <v-icon class="ml-1">mdi-exit-to-app</v-icon>
-                </v-btn>
-              </v-col>
-              <v-col cols="12" :md="3">
-                <v-btn
-                  :href="`https://www.kanzaki.com/works/2016/pub/image-annotator?u=${output.manifest}`"
-                  target="_blank"
-                  class="info"
-                  block
-                  rounded
-                  depressed
-                  large
-                >
-                  Image Annotator <v-icon class="ml-1">mdi-exit-to-app</v-icon>
-                </v-btn>
-              </v-col>
-              <v-col cols="12" :md="3">
-                <v-btn
-                  :href="`http://codh.rois.ac.jp/software/iiif-curation-viewer/demo/?curation=${output.curation}`"
-                  target="_blank"
-                  class="info"
-                  block
-                  rounded
-                  depressed
-                  large
-                >
-                  Curation Viewer <v-icon class="ml-1">mdi-exit-to-app</v-icon>
-                </v-btn>
-              </v-col>
-              <v-col cols="12" :md="6">
-                <v-btn
-                  :href="`https://lab.ndl.go.jp/dl/book/${id}`"
-                  target="_blank"
-                  color="secondary"
-                  block
-                  rounded
-                  depressed
-                >
-                  次世代デジタルライブラリー
-                  <v-icon class="ml-1">mdi-exit-to-app</v-icon>
-                </v-btn>
-              </v-col>
-              <v-col cols="12" :md="6">
-                <v-btn
-                  :href="`https://dl.ndl.go.jp/info:ndljp/pid/${id}`"
-                  target="_blank"
-                  color="secondary"
-                  block
-                  rounded
-                  depressed
-                >
-                  国立国会図書館デジタルコレクション
-                  <v-icon class="ml-1">mdi-exit-to-app</v-icon>
-                </v-btn>
-              </v-col>
-            </v-row>
+            <div class="mt-10 pb-10">
+              <h3 class="text-center mb-5">IIIF対応ビューア</h3>
+              <v-row>
+                <v-col cols="12" :md="3">
+                  <v-btn
+                    :to="localePath({ name: 'id-mirador', params: { id: id } })"
+                    target="_blank"
+                    class="info"
+                    block
+                    rounded
+                    depressed
+                    large
+                  >
+                    Mirador
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="3">
+                  <v-btn
+                    :href="`https://universalviewer.io/examples/uv/uv.html#?manifest=${output.manifest}`"
+                    target="_blank"
+                    class="info"
+                    block
+                    rounded
+                    depressed
+                    large
+                  >
+                    Universal Viewer
+                    <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="3">
+                  <v-btn
+                    :href="`https://www.kanzaki.com/works/2016/pub/image-annotator?u=${output.manifest}`"
+                    target="_blank"
+                    class="info"
+                    block
+                    rounded
+                    depressed
+                    large
+                  >
+                    Image Annotator
+                    <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="3">
+                  <v-btn
+                    :href="`http://codh.rois.ac.jp/software/iiif-curation-viewer/demo/?curation=${output.curation}`"
+                    target="_blank"
+                    class="info"
+                    block
+                    rounded
+                    depressed
+                    large
+                  >
+                    Curation Viewer
+                    <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </div>
+            <div class="mt-10">
+              <h3 class="text-center mb-5">関連サイト</h3>
+              <v-row>
+                <v-col cols="12" :md="4">
+                  <v-btn
+                    :href="`https://lab.ndl.go.jp/dl/book/${id}`"
+                    target="_blank"
+                    color="secondary"
+                    block
+                    rounded
+                    depressed
+                  >
+                    次世代デジタルライブラリー
+                    <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="4">
+                  <v-btn
+                    :href="`https://dl.ndl.go.jp/info:ndljp/pid/${id}`"
+                    target="_blank"
+                    color="secondary"
+                    block
+                    rounded
+                    depressed
+                  >
+                    国立国会図書館デジタルコレクション
+                    <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="4">
+                  <v-btn
+                    :href="`https://jpsearch.go.jp/item/dignl-${id}`"
+                    target="_blank"
+                    color="secondary"
+                    block
+                    rounded
+                    depressed
+                  >
+                    ジャパンサーチ
+                    <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </div>
           </template>
         </div>
       </div>
