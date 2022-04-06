@@ -106,6 +106,32 @@
                   Curation Viewer <v-icon class="ml-1">mdi-exit-to-app</v-icon>
                 </v-btn>
               </v-col>
+              <v-col cols="12" :md="6">
+                <v-btn
+                  :href="`https://lab.ndl.go.jp/dl/book/${id}`"
+                  target="_blank"
+                  color="secondary"
+                  block
+                  rounded
+                  depressed
+                >
+                  次世代デジタルライブラリー
+                  <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                </v-btn>
+              </v-col>
+              <v-col cols="12" :md="6">
+                <v-btn
+                  :href="`https://dl.ndl.go.jp/info:ndljp/pid/${id}`"
+                  target="_blank"
+                  color="secondary"
+                  block
+                  rounded
+                  depressed
+                >
+                  国立国会図書館デジタルコレクション
+                  <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                </v-btn>
+              </v-col>
             </v-row>
           </template>
         </div>
