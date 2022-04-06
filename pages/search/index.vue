@@ -77,7 +77,7 @@ import HorizontalItems from '~/components/HorizontalItems.vue'
   },
 })
 export default class FullTextSearch extends Vue {
-  q: string = ''
+  q: any = ''
   siteDesc: any = process.env.siteDesc
   start: Number = 0
   results: any = {}
