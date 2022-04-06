@@ -54,7 +54,7 @@
           </template>
           <template v-else-if="status === 'SUCCEEDED'">
             <div class="mt-10 pb-10">
-              <h3 class="text-center mb-5">IIIF対応ビューア</h3>
+              <h3 v-if="false" class="text-center mb-5">IIIF対応ビューア</h3>
               <v-row>
                 <v-col cols="12" :md="3">
                   <v-btn
@@ -113,7 +113,7 @@
                 </v-col>
               </v-row>
             </div>
-            <div class="mt-10">
+            <div v-if="false" class="mt-10">
               <h3 class="text-center mb-5">関連サイト</h3>
               <v-row>
                 <v-col cols="12" :md="4">

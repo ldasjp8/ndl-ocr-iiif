@@ -9,6 +9,19 @@
           >
         </div>
       </div>
+
+      <div class="my-5 text-center">
+        <!-- @click="isSearch = !isSearch" -->
+        <v-btn
+          rounded
+          depressed
+          color="error"
+          :to="localePath({ name: 'search' })"
+          ><v-icon class="mr-1">mdi-magnify</v-icon>簡易検索</v-btn
+        >
+        <div v-if="isSearch"></div>
+      </div>
+
       <div class="mt-10 text-center">
         <v-text-field
           v-model="id"
@@ -52,6 +65,8 @@ export default class FullTextSearch extends Vue {
   id: string = ''
   output: any = {}
   status: string = ''
+
+  // isSearch: boolean = false
 
   siteDesc: any = process.env.siteDesc
 

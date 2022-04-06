@@ -12,24 +12,28 @@
 
         <v-spacer></v-spacer>
 
-        <v-toolbar-items v-if="!isMobile">
-          <v-menu offset-y>
-            <template #activator="{ on }">
-              <v-btn depressed icon v-on="on">
-                <v-icon>mdi-translate</v-icon>
-              </v-btn>
-            </template>
+        <v-btn icon :to="localePath({ name: 'search' })">
+          <v-icon>mdi-magnify</v-icon>
+        </v-btn>
 
-            <v-list>
-              <v-list-item exact :to="switchLocalePath('ja')">
-                <v-list-item-title>日本語</v-list-item-title>
-              </v-list-item>
-              <v-list-item exact :to="switchLocalePath('en')">
-                <v-list-item-title>English</v-list-item-title>
-              </v-list-item>
-            </v-list>
-          </v-menu>
-        </v-toolbar-items>
+        <v-menu v-if="!isMobile" offset-y>
+          <template #activator="{ on }">
+            <v-btn depressed icon v-on="on">
+              <v-icon>mdi-translate</v-icon>
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item exact :to="switchLocalePath('ja')">
+              <v-list-item-title>日本語</v-list-item-title>
+            </v-list-item>
+            <v-list-item exact :to="switchLocalePath('en')">
+              <v-list-item-title>English</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+        <v-toolbar-items v-if="!isMobile"> </v-toolbar-items>
       </v-app-bar>
     </div>
     <v-main>
