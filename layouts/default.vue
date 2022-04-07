@@ -16,6 +16,10 @@
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
 
+        <v-btn v-if="!isMobile" icon :to="localePath({ name: 'about' })">
+          <v-icon>mdi-information</v-icon>
+        </v-btn>
+
         <v-menu v-if="!isMobile" offset-y>
           <template #activator="{ on }">
             <v-btn depressed icon v-on="on">
@@ -39,8 +43,16 @@
     <v-main>
       <Nuxt />
     </v-main>
-    <v-footer v-if="false" class="mt-10" dark>
-      <v-container class="py-10 text-center">{{ siteName }}</v-container>
+    <v-footer class="mt-10" dark>
+      <v-container class="py-10 text-center"
+        >Powered by
+        <a
+          target="_blank"
+          href="https://lab.ndl.go.jp/dl/"
+          :style="`color: inherit;`"
+          >国立国会図書館「次世代デジタルライブラリー」</a
+        ></v-container
+      >
     </v-footer>
   </v-app>
 </template>

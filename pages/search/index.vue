@@ -53,7 +53,7 @@
         </template>
 
         <template v-else>
-          <div v-if="results.hit">
+          <div v-if="results.list">
             <div class="text-center">
               <div class="my-5">
                 <h3 class="mb-2">{{ $t('検索結果') }}</h3>

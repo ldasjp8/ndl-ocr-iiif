@@ -1,5 +1,5 @@
 <template>
-  <ul class="horizontal-list">
+  <ul id="ul" class="horizontal-list">
     <li v-for="(obj, index) in data" :key="index" class="item">
       <CardItem
         :key="'value_' + index"
@@ -23,6 +23,14 @@ import CardItem from '~/components/HorizontalCardItem.vue'
   },
 })
 export default class Header extends Vue {
+  mounted() {
+    const container: any = document.getElementById('ul')
+    container.addEventListener('wheel', (e: any) => {
+      // e.preventDefault()
+      container.scrollLeft += e.deltaY
+    })
+  }
+
   @Prop({
     default: 240,
   })

@@ -1,11 +1,5 @@
 <template>
-  <v-card
-    no-body
-    :class="horizontal ? '' : 'mb-4'"
-    :style="horizontal ? 'width: ' + width + 'px;' : ''"
-    flat
-    outlined
-  >
+  <v-card no-body :style="`width: ${width}px;`" flat outlined>
     <nuxt-link
       :to="
         localePath({
@@ -24,15 +18,7 @@
     </nuxt-link>
     <div
       class="pa-4"
-      :style="
-        horizontal
-          ? 'width: ' +
-            width +
-            'px; height: ' +
-            height +
-            'px; overflow-y: auto;'
-          : ''
-      "
+      :style="`width: ${width}px; height: ${height}px; overflow-y: auto;`"
     >
       <nuxt-link
         :to="
@@ -50,7 +36,9 @@
       </div>
     </div>
 
-    <v-card-actions> </v-card-actions>
+    <v-card-actions class="pa-0">
+      <v-spacer></v-spacer>
+    </v-card-actions>
   </v-card>
 </template>
 
@@ -73,15 +61,5 @@ export default class CardItem extends Vue {
     default: 300,
   })
   height!: number
-
-  @Prop({
-    default: false,
-  })
-  horizontal!: boolean
 }
 </script>
-<style>
-a {
-  text-decoration: none;
-}
-</style>
