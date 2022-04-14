@@ -31,7 +31,8 @@ export default class Header extends Vue {
       sequenceMode: true,
       id: 'openseadragon',
       tileSources,
-      initialPage: Number(this.page) - 1
+      initialPage: Number(this.page) - 1,
+      prefixUrl: (process as any).env.hostname + (process as any).env.slug + "/images/"
     })
     this.viewer = viewer
 
