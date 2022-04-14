@@ -54,9 +54,9 @@
           </template>
           <template v-else-if="status === 'SUCCEEDED'">
             <div class="mt-10 pb-10">
-              <h3 v-if="false" class="text-center mb-5">IIIF対応ビューア</h3>
+              <h3 class="text-center mb-5">ビューア</h3>
               <v-row>
-                <v-col cols="12" :md="3">
+                <v-col cols="12" :md="4">
                   <v-btn
                     :to="localePath({ name: 'id-mirador', params: { id: id } })"
                     target="_blank"
@@ -69,7 +69,7 @@
                     Mirador
                   </v-btn>
                 </v-col>
-                <v-col cols="12" :md="3">
+                <v-col cols="12" :md="4">
                   <v-btn
                     :href="`https://universalviewer.io/examples/uv/uv.html#?manifest=${output.manifest}`"
                     target="_blank"
@@ -83,7 +83,7 @@
                     <v-icon class="ml-1">mdi-exit-to-app</v-icon>
                   </v-btn>
                 </v-col>
-                <v-col cols="12" :md="3">
+                <v-col cols="12" :md="4">
                   <v-btn
                     :href="`https://www.kanzaki.com/works/2016/pub/image-annotator?u=${output.manifest}`"
                     target="_blank"
@@ -97,7 +97,7 @@
                     <v-icon class="ml-1">mdi-exit-to-app</v-icon>
                   </v-btn>
                 </v-col>
-                <v-col cols="12" :md="3">
+                <v-col cols="12" :md="4">
                   <v-btn
                     :href="`http://codh.rois.ac.jp/software/iiif-curation-viewer/demo/?curation=${output.curation}`"
                     target="_blank"
@@ -109,6 +109,74 @@
                   >
                     Curation Viewer
                     <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="4">
+                  <v-btn
+                    :to="localePath({ name: 'id-tei', params: { id: id } })"
+                    target="_blank"
+                    class="info"
+                    block
+                    rounded
+                    depressed
+                    large
+                  >
+                    TEI Viewer
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="4">
+                  <v-btn
+                    :href="`https://lab.ndl.go.jp/dl/book/${id}`"
+                    target="_blank"
+                    class="info"
+                    block
+                    rounded
+                    depressed
+                    large
+                  >
+                    次世代デジタルライブラリー
+                    <v-icon class="ml-1">mdi-exit-to-app</v-icon>
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </div>
+            <div class="mt-10">
+              <h3 class="text-center mb-5">データ</h3>
+              <v-row>
+                <v-col cols="12" :md="4">
+                  <v-btn
+                    :href="`${output.manifest}`"
+                    target="_blank"
+                    color="secondary"
+                    block
+                    rounded
+                    depressed
+                  >
+                    マニフェストファイル
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="4">
+                  <v-btn
+                    :href="`${output.curation}`"
+                    target="_blank"
+                    color="secondary"
+                    block
+                    rounded
+                    depressed
+                  >
+                    キュレーションリスト
+                  </v-btn>
+                </v-col>
+                <v-col cols="12" :md="4">
+                  <v-btn
+                    :href="`${output.tei}`"
+                    target="_blank"
+                    color="secondary"
+                    block
+                    rounded
+                    depressed
+                  >
+                    TEI/XML
                   </v-btn>
                 </v-col>
               </v-row>

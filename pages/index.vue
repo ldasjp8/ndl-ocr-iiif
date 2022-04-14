@@ -19,7 +19,6 @@
           :to="localePath({ name: 'search' })"
           ><v-icon class="mr-1">mdi-magnify</v-icon>簡易検索</v-btn
         >
-        <div v-if="isSearch"></div>
       </div>
 
       <div class="mt-10 text-center">
